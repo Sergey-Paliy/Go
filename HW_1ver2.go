@@ -28,8 +28,6 @@ func main() {
 		// extension: <extension>
 
 		// Подсказка. Возможно вам понадобится функция strings.LastIndex
-		// Для проверки своего решения используйте функции filepath.Base() filepath.Ext(
-		// ) Они могут помочь для проверки решения
 	}
 	fmt.Printf("filename: %s\n", fileName)
 	fmt.Printf("extension: %s\n", fileExt)
