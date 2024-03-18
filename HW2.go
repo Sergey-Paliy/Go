@@ -13,13 +13,17 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 	counts := make(map[rune]int)
-	for _, letter := range strings.ToLower(text) {
+	letters := 0
+	text = strings.ToLower(text)
+	for _, letter := range text {
 		if unicode.IsLetter(letter) {
 			counts[letter]++
+			letters++
 		}
 	}
 	for letter, count := range counts {
-		fmt.Printf("%c: %d\n", letter, count)
+		percentage := float64(count) / float64(letters) * 100
+		fmt.Printf("%c: %d-> %.2f%%\n", letter, count, percentage)
 
 	}
 }
